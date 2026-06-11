@@ -1,3 +1,8 @@
 /bin/
+/build/
 test.cpp
 /.vscode/
+*.md
+
+# EXCEPTIONS
+!README.md

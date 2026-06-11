@@ -6,6 +6,8 @@ This project is not, at the moment, intended for serious usage. This is a person
 
 A simple CLI-based password manager written in C++. It allows you to securely store, list, and retrieve passwords for different websites using a master password for encryption.
 
+Currently not supported for Windows...
+
 ## Features
 
 - **Secure Storage**: Encrypts website, username, and password using a master password.
@@ -22,7 +24,15 @@ Use the following flags to perform different actions:
 | `-l`, `--list` | `L` | List all stored passwords |
 | `-r`, `--remove`, `-rm` | `R` | Remove a password entry for a specific site |
 | `-purge` | `PURGE` | Purge all stored data |
-| (none) | (default) | Retrieve the decrypted password for a specific website |
+| (none) | (default) | Copies the decrypted password for a specific website to the users clipboard |
+
+# Roadmap
+
+- Initial Release
+- Stronger User Verification
+- Stronger Password Encryption
+
+---
 
 ### Examples
 

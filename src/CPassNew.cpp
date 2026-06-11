@@ -53,3 +53,45 @@ std::string returnPassword(std::string site) {
         return "";
     }
 }
+
+// new functions to copy passwords to user clipboard
+void cpyPassword(std::string site) {
+    try {
+        enum SysOS userOS = getOS();
+        switch (userOS) {
+            case (WIN):
+                // windows
+                break;
+            case (MAC):
+                cpyPassMAC(returnPassword(site));
+                break;
+            case (LIN):
+                cpyPassLIN(returnPassword(site));
+                break;
+            case (UNIX):
+                // unix?
+                break;
+            default:
+                std::cout << "Either no password exists, or user is on unknown device..." << std::endl;
+                break;
+        }
+    } catch (const std::exception& e) {
+        std::cerr << "Error: " << e.what() << std::endl;
+    }
+}
+
+void cpyPassLIN(std::string text) {
+    FILE* pipe = popen("xclip -selection clipboard", "w");
+    if (pipe) {
+        fputs(text.c_str(), pipe);
+        pclose(pipe);
+    }
+}
+
+void cpyPassMAC(std::string text) {
+    FILE* pipe = popen("pbcopy", "w");
+    if (pipe) {
+        fputs(text.c_str(), pipe);
+        pclose(pipe);
+    }
+}

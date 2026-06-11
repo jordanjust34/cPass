@@ -20,7 +20,7 @@ void parseFlag(int argc, char* argv[]) {    // do I need 'argc'?
             break;
         case (NOFLAG):
         default:
-            std::cout << returnPassword(argv[1]) << std::endl;
+            cpyPassword(argv[1]);   // new function to copy password to user clipboard on MAC & LIMUX
             break;
     }
 }

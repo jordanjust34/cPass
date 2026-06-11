@@ -9,7 +9,7 @@ enum SysOS getOS() {
     #elif defined(__linux__)
         OS = LIN;
     #else
-        OS = MISC;
+        OS = UNIX;
     #endif
     return OS;
 }

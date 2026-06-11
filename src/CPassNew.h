@@ -13,4 +13,8 @@
 void newPassword(std::vector<std::string>);
 std::string returnPassword(std::string);    // decided to put this here because I can
 
+void cpyPassword(std::string);
+void cpyPassLIN(std::string);
+void cpyPassMAC(std::string);
+
 #endif

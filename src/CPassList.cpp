@@ -12,7 +12,7 @@ void list() {
                 std::string fileName = fp.path().filename().string();
                 if((fileName.size() > 5) && (fileName.substr(fileName.size() - 5) == ".json")) {
                     fileName = fileName.substr(0, fileName.size() - 5);\
-                    fileVec.push_back(fileName);
+                    if(fileName != "config") fileVec.push_back(fileName);   // don't add the config file to the list of listed files
                 }
                 cnt ++;
             }
