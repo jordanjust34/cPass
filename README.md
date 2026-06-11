@@ -26,6 +26,11 @@ Use the following flags to perform different actions:
 | `-purge` | `PURGE` | Purge all stored data |
 | (none) | (default) | Copies the decrypted password for a specific website to the users clipboard |
 
+# Requirements
+
+MacOS: `pbcopy`
+Linux: `xclip`
+
 # Roadmap
 
 - Initial Release
