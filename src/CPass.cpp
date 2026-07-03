@@ -1,11 +1,19 @@
 #include "CPass.h"
 
+
 void CPass(int argc, char* argv[]) {
     try {
         parseFlag(argc, argv);
+
+        /* Start of new verifying feature */
+        // if(verify()) {
+        //     parseFlag(argc, argv);
+        // } else {
+        //     std::cout << "Error with given password..." << std::endl;
+        //     return;
+        // }
     } catch (const std::exception& e) {
         std::cerr << e.what() << std::endl;
-        std::cout << "Error" << std::endl;  // delete later ig
         return;
     }
 }

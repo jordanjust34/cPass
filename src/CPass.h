@@ -5,6 +5,7 @@
 #include <filesystem>
 
 #include "CPassFlags.h"
+#include "CPassCred.h"
 
 void CPass(int, char*[]);
 bool CPassConfig();
